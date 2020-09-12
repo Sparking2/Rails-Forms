@@ -1,0 +1,13 @@
+<h1>Edit user data</h1>
+
+<%= form_for(@user, html: {multipart: true}) do |f| %>
+  <%= f.label :username, 'Username' %>
+  <%= f.text_field :username, value: @user.username %>
+  <br>
+  <%= f.label :email, 'e-mail' %>
+  <%= f.email_field :email, value: @user.email %>
+  <br>
+  <%= f.label :password, 'password' %>
+  <%= f.password_field :password%>
+  <%= f.submit %>
+<% end %>
